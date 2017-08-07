@@ -3,11 +3,7 @@ spring:
         config:
             server:
                 git:
-                  uri: https://github.com/iloveZzz/SpringCloudConfig/tree/master/config-repo
-                  username: 596167028@qq.com
-                  password: zhudao123
-            name: publisher
-            label: develop
+                  uri: https://github.com/iloveZzz/spring-config-repo
     application:
       name: microservice-config-server
 management:

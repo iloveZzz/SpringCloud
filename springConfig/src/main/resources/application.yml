@@ -2,13 +2,35 @@ spring:
     cloud:
         config:
             server:
+                encrypt:
+                  enabled: false
                 git:
                   uri: https://github.com/iloveZzz/spring-config-repo
+                  search-paths: app-server,web-client,yml-ceshi
+                health:
+                  repositories:
+                    app-server:
+                      label: master
+                      name: microserver-app
+                      profiles: dev,product
+
     application:
       name: microservice-config-server
+    profiles:
+      active:
 management:
   security:
     enabled: false
 server:
   port: 8080
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG
+encrypt:
+  key-store:
+    location: classpath:/server.jks
+    password: letmein
+    alias: mytestkey
+    secret: changeme
 

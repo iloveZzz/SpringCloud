@@ -16,21 +16,20 @@ spring:
 
     application:
       name: microservice-config-server
-    profiles:
-      active:
 management:
   security:
-    enabled: false
+    enabled: true
 server:
   port: 8080
 logging:
   level:
-    org.springframework.cloud: DEBUG
-    org.springframework.boot: DEBUG
-encrypt:
-  key-store:
-    location: classpath:/server.jks
-    password: letmein
-    alias: mytestkey
-    secret: changeme
+    org.springframework.cloud: INFO
+    org.springframework.boot: INFO
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xianbei.viphk.ngrok.org/eureka/
+  instance:
+    preferIpAddress: true
+
 

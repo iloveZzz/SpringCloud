@@ -13,28 +13,32 @@ spring:
                       label: master
                       name: microserver-app
                       profiles: dev,product
+        bus:
+          trace:
+            enabled: true
 
     application:
       name: microservice-config-server
     rabbitmq:
-#      host: 192.168.129.201
-#      port: 5672
+      host: 192.168.129.201
+      port: 5672
       addresses: 192.168.129.201:5672
       username: xianbei
       password: Xianbei123.
+      virtual-host: test_config
 management:
   security:
-    enabled: true
+    enabled: false
 server:
   port: 8080
 logging:
   level:
     org.springframework.cloud: DEBUG
-    org.springframework.boot: INFO
+    org.springframework.boot: DEBUG
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://xianbei.viphk.ngrok.org/eureka/
+      defaultZone: http://192.168.129.201:5001/eureka/
   instance:
     preferIpAddress: true
 

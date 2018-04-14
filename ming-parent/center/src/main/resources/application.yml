@@ -1,0 +1,14 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+    region: cn-bj-1
+spring:
+  application:
+    name: ming-eureka-server

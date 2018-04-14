@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ming-gateway
+server:
+  port: 8061
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

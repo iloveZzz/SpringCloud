@@ -1,0 +1,15 @@
+zuul:
+  routes:
+    web1:
+      path: /ming-web/**
+      serviceId: ming-web
+      stripPrefix: true
+ming-web:
+  ribbon:
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
+ribbon:
+  eager-load:
+    enabled: true

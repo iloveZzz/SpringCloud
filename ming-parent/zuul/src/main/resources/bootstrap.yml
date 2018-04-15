@@ -1,9 +1,11 @@
 zuul:
   routes:
     web1:
-      path: /ming-web/**
+      path: /web1/**
       serviceId: ming-web
       stripPrefix: true
+  ignore-local-service: true
+  ignored-services: '*'
 ming-web:
   ribbon:
     ConnectTimeout: 1000

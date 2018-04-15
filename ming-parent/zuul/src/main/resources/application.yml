@@ -1,9 +1,16 @@
 spring:
   application:
-    name: ming-gateway
+    name: ming-zuul
 server:
   port: 8061
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8001/eureka/
+ zuul:
+  routes:
+    web1:
+      path: /ming-web/**
+      serviceId: web1
+

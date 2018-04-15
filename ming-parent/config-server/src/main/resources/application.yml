@@ -1,0 +1,26 @@
+spring:
+    cloud:
+        config:
+            server:
+                encrypt:
+                  enabled: false
+                git:
+                  uri: https://github.com/iloveZzz/spring-config-repo
+                  search-paths: /**
+                  default-label: master
+                  force-pull: true
+                health:
+                  repositories:
+                    app-server:
+                      label: master
+                      name: microserver-app
+                      profiles: dev,product
+
+    application:
+      name: ming-config-server
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

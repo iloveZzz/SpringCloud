@@ -1,3 +1,8 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    region: cn-bj-1
 spring:
   application:
     name: ming-web
@@ -5,5 +10,7 @@ spring:
     config:
       label: master
       profile: dev,product
-      uri: http://localhost:8002
       name: microserver-app
+      discovery:
+        enabled: true
+        service-id: ming-config-server

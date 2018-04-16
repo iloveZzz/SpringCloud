@@ -3,9 +3,9 @@ spring:
     name: ming-zuul
 server:
   port: 8061
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8001/eureka/
+    region: cn-bj-1
 

@@ -1,6 +1,2 @@
 server:
-  port: ${PORT}
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8001/eureka/
+  port: ${PORT:8060}

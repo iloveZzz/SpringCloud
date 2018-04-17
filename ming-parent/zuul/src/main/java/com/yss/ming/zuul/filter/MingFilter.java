@@ -1,6 +1,5 @@
 package com.yss.ming.zuul.filter;
 
-<<<<<<< HEAD
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -19,7 +18,7 @@ public class MingFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return PRE_DECORATION_FILTER_ORDER-1;
+        return PRE_DECORATION_FILTER_ORDER - 1;
     }
 
     @Override
@@ -39,7 +38,4 @@ public class MingFilter extends ZuulFilter {
         }
         return null;
     }
-=======
-public class MingFilter {
->>>>>>> b8f979e8cf27601602f785f75b10b20a31694e73
 }

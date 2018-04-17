@@ -1,5 +1,6 @@
 package com.yss.ming.zuul.hystrix;
 
+<<<<<<< HEAD
 import com.yss.ming.zuul.feign.HystrixClient;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
@@ -18,4 +19,7 @@ public class HystrixClientFallback implements FallbackFactory<HystrixClient> {
             }
         };
     }
+=======
+public class HystrixClientFallback {
+>>>>>>> b8f979e8cf27601602f785f75b10b20a31694e73
 }

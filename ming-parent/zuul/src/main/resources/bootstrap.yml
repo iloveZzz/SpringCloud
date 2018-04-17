@@ -1,17 +1,8 @@
-zuul:
-  routes:
-    web1:
-      path: /web1/**
-      serviceId: ming-web
-      stripPrefix: true
-  ignore-local-service: true
-  ignored-services: '*'
-ming-web:
-  ribbon:
-    ConnectTimeout: 1000
-    ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
-ribbon:
-  eager-load:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    region: cn-bj-1
+feign:
+  hystrix:
     enabled: true

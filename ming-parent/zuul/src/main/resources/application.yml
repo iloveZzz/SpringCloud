@@ -3,9 +3,19 @@ spring:
     name: ming-zuul
 server:
   port: 8061
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8001/eureka/
-    region: cn-bj-1
-
+zuul:
+  routes:
+    webs:
+      path: /web1/**
+      serviceId: ming-web
+  ignore-local-service: true
+  prefix: /api
+ribbon:
+  eager-load:
+    enabled: true
+ming-web:
+  ribbon:
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100

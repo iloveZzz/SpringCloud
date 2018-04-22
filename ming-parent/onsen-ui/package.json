@@ -1,0 +1,15 @@
+{
+  "name": "onsen-ui",
+  "version": "1.0.0",
+  "description": "html5 mobile ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "daomingzhu",
+  "license": "ISC",
+  "devDependencies": {
+    "onsenui": "^2.9.2",
+    "react-onsenui": "^1.10.0"
+  }
+}
